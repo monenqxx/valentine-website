@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To moneqxx</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home">
+    <div class="container">
+        <h1>Happy Valentine's Day To moneqxx ❤️</h1>
+        <p>ใส่รหัสเพื่อเข้าสู่โลกแห่งความรักของเรา</p>
+        <input type="password" id="pin" placeholder="กรอกรหัส PIN" maxlength="6">
+        <button onclick="checkPIN()">เข้าสู่เว็บไซต์</button>
+    </div>
+
+    <script>
+        function checkPIN() {
+            const pin = document.getElementById("pin").value;
+            if (pin === "160945") {
+                window.location.href = "rose.html";
+            } else {
+                alert("รหัสผิด! ลองอีกครั้ง");
+            }
+        }
+    </script>
+</body>
+</html>
