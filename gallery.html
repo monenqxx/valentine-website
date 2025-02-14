@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gallery">
+    <h1>Memories of Us ❤️</h1>
+
+    <div class="slideshow-container">
+        <img src="image1.jpg" class="slide">
+        <img src="image2.jpg" class="slide">
+        <img src="image3.jpg" class="slide">
+        <!-- ใส่รูปครบ 20 รูป -->
+    </div>
+
+    <button onclick="nextPage()">ไปยังหน้าเพลงพิเศษ</button>
+
+    <script>
+        let index = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            index++;
+            if (index > slides.length) { index = 1; }
+            slides[index - 1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+        showSlides();
+
+        function nextPage() {
+            window.location.href = "song.html";
+        }
+    </script>
+</body>
+</html>
